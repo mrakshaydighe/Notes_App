@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Application </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-white text-2xl font-bold">Notes App</a>
+            <div class="block lg:hidden">
+                <button id="nav-toggle" class="text-gray-500 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="nav-content">
+                <ul class="lg:flex lg:items-center lg:space-x-4 lg:text-sm lg:font-medium">
+                    <li><a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="/about" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white">About</a></li>
+                    <li><a href="/contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main w-full min-h-screen bg-zinc-700 text-white p-10">
+        <a class="text-blue-500 inline-block mb-6" href="/">Go to Homepage</a>
+        <form action="/update" method="post">
+            <input class=" outline-none block px-3 py-2 text-zinc-400 bg-zinc-800 w-1/4 rounded-lg" type="text" placeholder="Previous Name" name="prename" value="<%= filename %>">
+            <input class=" outline-none block px-3 py-2 mt-2 bg-zinc-800 resize-none w-1/4 rounded-lg" type="text" name="updatedname" placeholder="Edit Name">
+            <input type="submit" class="mt-2 bg-yellow-600 py-2 px-4 rounded-md" value="Update Task">
+        </form>
+    </div> 
+    <footer class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <p class="text-gray-400">© 2024 NotesApp</p>
+            <div class="flex space-x-4">
+                <a href="https://www.linkedin.com/in/mrakshaydighe/" target="_blank" class="text-gray-400 hover:text-white">LinkedIn</a>
+                <a href="https://www.instagram.com/mr_akshaydighe/" target="_blank" class="text-gray-400 hover:text-white">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
